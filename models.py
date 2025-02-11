@@ -14,3 +14,9 @@ class Question(Base): # Model for the questions table
     choice_c = Column(String, nullable=False)
     choice_d = Column(String, nullable=False)
     correct_answer = Column(String, nullable=False) # The correct answer to the question (a, b, c, or d)
+
+class User(Base): # Using the Question class as a template, add a tablename (users), an id column, a name column and a score column.
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    score = Column(String, nullable=False)
